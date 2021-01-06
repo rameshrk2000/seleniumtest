@@ -20,6 +20,7 @@ public class App
          chromeOptions.addArguments("--headless");
          chromeOptions.addArguments("--disable-dev-shm-usage"); //should be enabled for Jenkins
          chromeOptions.addArguments("--window-size=1920x1080"); //should be enabled for Jenkins
+         chromeOptions.setExperimentalOption("useAutomationExtension", false);
     	 WebDriver driver = new ChromeDriver(chromeOptions);
     	 System.out.println("Hi, Welcome to Ramesh Kancherla Webapp testing on Selenium WebDriver");
     	 driver.get("http://192.168.56.110:9090/");
