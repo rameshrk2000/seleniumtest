@@ -18,8 +18,7 @@ public class App
     	 System.setProperty("webdriver.chrome.driver","/usr/local/bin/chromedriver");
     	 ChromeOptions chromeOptions = new ChromeOptions();
          chromeOptions.addArguments("--headless");
-         chromeOptions.addArguments("--disable-dev-shm-usage"); //should be enabled for Jenkins
-         chromeOptions.addArguments("--window-size=1920x1080"); //should be enabled for Jenkins
+         chromeOptions.addArguments("--no-sandbox", "--disable-dev-shm-usage");
          chromeOptions.setExperimentalOption("useAutomationExtension", false);
     	 WebDriver driver = new ChromeDriver(chromeOptions);
     	 System.out.println("Hi, Welcome to Ramesh Kancherla Webapp testing on Selenium WebDriver");
